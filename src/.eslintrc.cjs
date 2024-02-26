@@ -22,6 +22,7 @@ module.exports = {
   plugins: ["@typescript-eslint"],
   rules: {
     "no-console": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
     //* Avoid Bugs
     "no-undef": "error",
     "semi-spacing": "error",

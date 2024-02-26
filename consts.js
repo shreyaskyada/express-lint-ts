@@ -31,7 +31,7 @@ export const PRETTIER_INSTALL_COMMAND = {
 }
 
 export const getDefaultProjectJSON = (name) => ({
-  name: name,
+  name: name.toLowerCase(),
   version: "1.0.0",
   description: "",
   main: "src/index.ts",

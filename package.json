@@ -1,11 +1,15 @@
 {
   "name": "express-lint-ts",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "type": "module",
   "bin": {
     "express-ts-demo": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shreyaskyada/express-lint-ts.git"
   },
   "dependencies": {
     "commander": "^12.0.0",
