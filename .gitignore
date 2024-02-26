@@ -1,0 +1,33 @@
+# Logs
+logs
+*.log
+
+# Node modules
+node_modules/
+
+# Dependency directories
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+*.swn
+*.swo
+*.swp
+._*
+.DS_Store
+Thumbs.db
+
+# Environment variables file
+.env
+
+# Build output
+/dist
