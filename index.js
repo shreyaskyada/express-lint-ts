@@ -70,7 +70,15 @@ function askPackageManager() {
     fs.cpSync(path.resolve(__dirname, "src/template"), dirName, {
       recursive: true,
     });
-    fs.copyFileSync(path.resolve(__dirname, "src/.gitignore"), dirName + "/.gitignore");
+
+    fs.readFile(path.resolve(__dirname, "src/gitignore.txt"), "utf8", (err, data) => {
+      console.log(data);
+      if (err) {
+        console.error(err);
+        return;
+      }
+      fs.writeFileSync(dirName + "/.gitignore", data);
+    });
 
     console.log("Generating package.json...");
     fs.writeFileSync(dirName + "/package.json", JSON.stringify(projectJSON, null, 2));
