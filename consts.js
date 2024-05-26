@@ -1,9 +1,9 @@
 export const NPM_TYPESCRIPT = "npm install typescript --save-dev";
 
 export const EXPRESS_INSTALL_COMMANDS = {
-  npm: "npm install express --save-dev",
-  pnpm: "pnpm install express --save-dev",
-  yarn: "yarn add express --dev",
+  npm: "npm install express && npm install nodemon --save-dev",
+  pnpm: "pnpm install express && pnpm install nodemon --save-dev",
+  yarn: "yarn add express && yarn add nodemon --dev",
 };
 
 export const TYPESCRIPT_INSTALL_COMMANDS = {
@@ -38,8 +38,8 @@ export const getDefaultProjectJSON = (name) => ({
   type: "module",
   scripts: {
     build: "npx tsc",
-    preserver: "npm run build",
-    server: 'npx concurrently "npx tsc -w"  "nodemon dist/server.js"',
+    predev: "npm run build",
+    dev: 'npx concurrently "npx tsc -w --preserveWatchOutput"  "nodemon dist/server.js"',
   },
   keywords: [],
   author: "",
